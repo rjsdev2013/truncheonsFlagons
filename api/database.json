@@ -1,26 +1,25 @@
 {
-    "players": [
-        {
-            "id": 1,
-            "nameFirst": "Darryl",
-            "nameLast": "Wilson",
-            "country": "USA",
-            "teamId": 1
-            
-        }
-    ],
-    "teams": [
-        {
-            "id": 1,
-            "teamName": "The Doodlers"
+  "players": [
+    {
+      "id": 1,
+      "nameFirst": "Darryl",
+      "nameLast": "Wilson",
+      "country": "USA",
+      "teamId": 1
+    }
+  ],
+  "teams": [
+    {
+      "id": 1,
+      "teamName": "The Doodlers"
+    },
+    {
+      "id": 2,
+      "teamName": "The Dads"
+    }
 
-        },
-        {
-            "id": 2,
-            "teamName": "The Dads"
-        }
-    ],
-    "scores": [
-        {}
-    ]
+  ],
+  "scores": [
+    {}
+  ]
 }

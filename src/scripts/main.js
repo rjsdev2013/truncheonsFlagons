@@ -1,5 +1,5 @@
 import { fetchPlayers, fetchTeams } from "./dataAccess.js"
-import { PlayerForm } from "./player.js"
+import {TrunchAndFlag} from "./TrunchAndFlag.js"
 
 const mainContainer = document.querySelector("#container")
 
@@ -16,7 +16,7 @@ const render = () => {
         () => {
             fetchTeams().then(
                 ()=>{
-                        mainContainer.innerHTML = PlayerForm()
+                        mainContainer.innerHTML = TrunchAndFlag()
                    
                 }
             )
