@@ -1,4 +1,4 @@
-applicationState = {
+const applicationState = {
     players: [],
     teams: [],
     scores: []

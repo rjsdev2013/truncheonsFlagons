@@ -14,9 +14,13 @@
             "id": 1,
             "teamName": "The Doodlers"
 
+        },
+        {
+            "id": 2,
+            "teamName": "The Dads"
         }
     ],
-    "games": [
+    "scores": [
         {}
     ]
 }
