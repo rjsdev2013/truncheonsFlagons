@@ -1,6 +1,7 @@
 import { newTeamForm } from "./team.js"
 import { PlayerForm } from "./player.js"
 import { createTeam } from "./dataAccess.js"
+import { Leaderboard } from "./leaderboard.js"
 
 const mainContainer = document.querySelector("#container")
 
@@ -26,7 +27,16 @@ export const TrunchAndFlag = () => {
         <h2>New Player</h2>
         ${PlayerForm()}
         <button class="button" id="addPlayer">Add Player to Team</button>
-    </section>`
+    </section>    
+    <section class="leaderBoard">
+    <h3>Leaderboard</h3>
+    ${Leaderboard()}
+    </section>
+    
+    `
+    
+    
+    
 
 
     return html
