@@ -1,0 +1,22 @@
+{
+    "players": [
+        {
+            "id": 1,
+            "nameFirst": "Darryl",
+            "nameLast": "Wilson",
+            "country": "USA",
+            "teamId": 1
+            
+        }
+    ],
+    "teams": [
+        {
+            "id": 1,
+            "teamName": "The Doodlers"
+
+        }
+    ],
+    "games": [
+        {}
+    ]
+}
