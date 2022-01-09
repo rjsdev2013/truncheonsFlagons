@@ -1,4 +1,24 @@
-import {getPlayers, getTeams} from "./dataAccess.js"
+import {getPlayers, getTeams, createPlayer} from "./dataAccess.js"
+
+const mainContainer = document.querySelector("#container")
+
+mainContainer.addEventListener("click",clickEvent => {
+    if (clickEvent.target.id === "addPlayer"){
+        const newPlayerFirst = document.querySelector("input[name='firstName']").value
+        const newPlayerLast = document.querySelector("input[name='lastName']").value
+        const newPlayerTeam = document.querySelector("option").value
+
+        const PlayerToAPI = {
+            nameFirst: newPlayerFirst,
+            nameLast: newPlayerLast,
+            country: "USA",
+            teamId: newPlayerTeam
+
+        }
+
+        createPlayer(PlayerToAPI)
+    }
+})
 
 const createTeamList = (team) => {
     return `
