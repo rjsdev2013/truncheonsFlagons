@@ -15,7 +15,7 @@ export const Leaderboard = () => {
     const teams = getTeams()
 
     let html = `
-    <div class="team team--${teams.map(getTeamId)}">
+    <div class="team team--#)}">
         <div class="team_column team_name">
         ${teams.map(createLeaderboardList).join("")}
         </div>
