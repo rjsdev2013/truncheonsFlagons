@@ -22,7 +22,7 @@ mainContainer.addEventListener("click",clickEvent => {
 
 const createTeamList = (team) => {
     return `
-            <option value=${team.id}> ${team.teamName}</option>
+            <option value=${team.id}>${team.teamName}</option>
 
             `
 }
