@@ -30,7 +30,15 @@ export const TrunchAndFlag = () => {
     </section>    
     <section class="leaderBoard">
     <h3>Leaderboard</h3>
-    ${Leaderboard()}
+    <div class="teams">
+        <div class="team team_header">
+            <div class="team_columnheader team_name">Team Name</div>
+            <div class="team_columnheader team_playercount">Players</div>
+            <div class="team_columnheader team_score">Score</div>
+        </div>
+        ${Leaderboard()}
+    </div>
+ 
     </section>
     
     `
