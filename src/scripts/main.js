@@ -1,6 +1,6 @@
 import { fetchPlayers, fetchTeams } from "./dataAccess.js"
 import { TrunchAndFlag } from "./TrunchAndFlag.js"
-import { Button, Game } from "./game.js"
+import { Button, TeamSelection } from "./game.js"
 
 const mainContainer = document.querySelector("#container")
 const gameContainer = document.querySelector("#gameContainer")
@@ -30,7 +30,7 @@ export const buttonRender = () => {
 }
 
 export const gameRender = () => {
-    gameContainer.innerHTML = Game()
+    gameContainer.innerHTML = TeamSelection()
 }
 
 gameContainer.addEventListener("click", clickEvent => {

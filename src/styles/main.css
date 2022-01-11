@@ -1,0 +1,10 @@
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.chunks {
+    margin: 20px;
+    border: 2px solid grey;
+    padding: 10px;
+}
