@@ -1,7 +1,9 @@
 import { fetchPlayers, fetchTeams } from "./dataAccess.js"
-import {TrunchAndFlag} from "./TrunchAndFlag.js"
+import { TrunchAndFlag } from "./TrunchAndFlag.js"
+import { Button, Game } from "./game.js"
 
 const mainContainer = document.querySelector("#container")
+const gameContainer = document.querySelector("#gameContainer")
 
 mainContainer.addEventListener(
     "stateChanged",
@@ -11,17 +13,32 @@ mainContainer.addEventListener(
     }
 )
 
-const render = () => {
+export const render = () => {
     fetchPlayers().then(
         () => {
             fetchTeams().then(
                 ()=>{
                         mainContainer.innerHTML = TrunchAndFlag()
-                   
                 }
             )
         }
     )
 }
 
+export const buttonRender = () => {
+    gameContainer.innerHTML = Button()
+}
+
+export const gameRender = () => {
+    gameContainer.innerHTML = Game()
+}
+
+gameContainer.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "start-button") {
+        console.log('state data has changed.regenerating html...')
+        gameRender()
+    }
+})
+
 render()
+buttonRender()

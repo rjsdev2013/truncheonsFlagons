@@ -13,6 +13,13 @@
       "country": "USA",
       "teamId": "0",
       "id": 2
+    },
+    {
+      "nameFirst": "Test",
+      "nameLast": "Tester",
+      "country": "USA",
+      "teamId": "0",
+      "id": 3
     }
   ],
   "teams": [
