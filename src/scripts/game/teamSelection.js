@@ -36,5 +36,6 @@ export const TeamSelection = () => {
             teams.map(createTeamSelectionList).join("")
          }
         </select>
+        <button id="start-round-1">START ROUND 1</button>
     `
         }
