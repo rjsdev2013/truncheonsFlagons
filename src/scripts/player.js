@@ -31,14 +31,14 @@ export const PlayerForm = () => {
     const teams = getTeams()
     let html = `
     <form id="playerform">
-    <input name="firstName" type="text" placeholder="First Name">
-    <input name="lastName" type="text" placeholder="Last Name">
-    <select id="team">
-        <option value ="" >Select a Team</option>
+    <div class="newplayer"><input name="firstName" type="text" placeholder="First Name"></div>
+    <div class="newplayer"><input name="lastName" type="text" placeholder="Last Name"></div>
+    <div class="newplayer"><select id="team">
+        <option value ="" >Select a Team</option> 
             ${
                 teams.map(createTeamList).join("")
              }
-    </select>
+    </select><div>
     </form>
     
     `

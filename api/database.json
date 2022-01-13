@@ -48,6 +48,13 @@
       "country": "USA",
       "teamId": 4,
       "id": 7
+    },
+    {
+      "nameFirst": "",
+      "nameLast": "",
+      "country": "USA",
+      "teamId": null,
+      "id": 8
     }
   ],
   "teams": [
