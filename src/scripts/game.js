@@ -31,7 +31,7 @@ export const TeamSelection = () => {
         ${
             teams.map(createTeamSelectionList).join("")
          }
-        </select>
+        </select></aside>
     `
     return html
         }
