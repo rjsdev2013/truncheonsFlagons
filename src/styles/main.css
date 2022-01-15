@@ -63,15 +63,6 @@ input {
     width: 200px;
 }
 
-/* #start-button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-    height: 20%;
-    background-color: lightgreen;
-} */
-
 #start-button {
     position: absolute;
     top: 50%;
