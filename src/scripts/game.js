@@ -1,5 +1,6 @@
 import { getTeams } from "./dataAccess.js"
 
+
 const createTeamSelectionList = (team) => {
     return `
     <option value="${team.id}">${team.teamName}</option>
@@ -12,29 +13,31 @@ export const TeamSelection = () => {
 
     let html = `
         <h2> Team 1 </h2>
-        <select>
+        <select id="option1">
         <option value="0">Select a Team</option>
             ${
                 teams.map(createTeamSelectionList).join("")
              }
             </select>
         <h2> Team 2 </h2>
-        <select>
+        <select id="option2">
+        <option value="0">Select a Team</option>
+        ${
+            teams.map(createTeamSelectionList).join("")
+         }
+        </select  id="option3">
+        <h2> Team 3 </h2>
+        <select id="option3">
         <option value="0">Select a Team</option>
         ${
             teams.map(createTeamSelectionList).join("")
          }
         </select>
-        <h2> Team 3 </h2>
-        <select>
-        <option value="0">Select a Team</option>
-        ${
-            teams.map(createTeamSelectionList).join("")
-         }
-        </select></aside>
     `
     return html
-        }
+        
+}
+
 
 export const Button = () => {
     let html = `
@@ -44,3 +47,4 @@ export const Button = () => {
 
     return html
 }
+

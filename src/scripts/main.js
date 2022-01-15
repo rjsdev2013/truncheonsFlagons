@@ -2,6 +2,7 @@ import { fetchPlayers, fetchTeams } from "./dataAccess.js"
 import { TrunchAndFlag } from "./TrunchAndFlag.js"
 import { Button, TeamSelection } from "./game.js"
 
+
 const mainContainer = document.querySelector("#container")
 const gameContainer = document.querySelector("#gameContainer")
 
