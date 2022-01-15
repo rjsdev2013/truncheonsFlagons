@@ -4,15 +4,15 @@ const gameContainer = document.getElementById("gameContainer")
 
 
 
-document.addEventListener(
+gameContainer.addEventListener(
     "change",
     (event) => {
-        const option1 = document.getElementById("option1").value; 
-        const option2 = document.getElementById("option2").value; 
-        const option3 = document.getElementById("option3").value;
+        // const option1 = document.getElementById("option1").value; 
+        // const option2 = document.getElementById("option2").value; 
+        // const option3 = document.getElementById("option3").value;
 
-        if (event.target.id === "option1" && option1 != 0) {
-            console.log('Team has been selected')
+        if (event.target.id === "option1") {
+            window.alert('Team has been selected')
         }
     }
 )
