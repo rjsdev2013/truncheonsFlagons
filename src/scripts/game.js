@@ -1,5 +1,5 @@
 import { getTeams } from "./dataAccess.js"
-
+import { roundScores } from "./roundscoreinput.js"
 
 const createTeamSelectionList = (team) => {
     return `
@@ -48,3 +48,12 @@ export const Button = () => {
     return html
 }
 
+const gameContainer = document.getElementById("gameContainer")
+
+gameContainer.addEventListener(
+    "optionsChanged", 
+    event => {
+        console.log("made it to the event listener")
+        gameContainer.innerHTML = roundScores()
+    }
+)

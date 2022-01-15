@@ -1,22 +1,18 @@
-
-
 const gameContainer = document.getElementById("gameContainer")
-
-
 
 gameContainer.addEventListener(
     "change",
     (event) => {
-        // const option1 = document.getElementById("option1").value; 
-        // const option2 = document.getElementById("option2").value; 
-        // const option3 = document.getElementById("option3").value;
+        const option1 = document.getElementById("option1").value; 
+        const option2 = document.getElementById("option2").value; 
+        const option3 = document.getElementById("option3").value;
 
-        if (event.target.id === "option1") {
-            window.alert('Team has been selected')
+        if (option1 != 0 && option2 != 0 && option3 != 0) {
+            console.log("Teams have been selected")
+            gameContainer.dispatchEvent(new CustomEvent("optionsChanged"))
         }
-    }
-)
-
+    }  
+) 
 
 export const roundScores = () => {
     let html = `
@@ -33,29 +29,4 @@ export const roundScores = () => {
     
         return html
 }
-// document.addEventListener (
-//     "change",
-//     (event) => {
-//         const option1 = document.getElementById("option1").value; 
-//         const option2 = document.getElementById("option2").value; 
-//         const option3 = document.getElementById("option3").value;
-        
-//         if (option1 != 0 && option2 != 0 && option3 != 0) {
-//             if event.target.value != 0
-
-//             console.log('Three options have been selected. Regenerating html...')
-//             gameContainer.innerHTML = roundScores()
-//             // gameContainer.dispatchEvent(new CustomEvent("optionsChanged"))
-//         }
-//     }
-// )
-
-// gameContainer.addEventListener(
-//     "optionsChanged",
-//     customEvent => {
-//         console.log('Three options have been selected.regenerating html...')
-//         gameContainer.innerHTML = roundScores()
-//     }
-// )
-
-
+ 
