@@ -1,7 +1,8 @@
 const applicationState = {
     players: [],
     teams: [],
-    scores: []
+    scores: [],
+    gameTeams: []
 }
 
 // API Constant Variable
@@ -78,4 +79,12 @@ export const getTeams = () => {
 
 export const getScores = () => {
     return applicationState.scores.map(score =>({...score}))
+}
+
+export const getGameTeams = () => {
+    return applicationState.gameTeams
+}
+
+export const saveGameTeams = (gameTeams) => {
+    applicationState.gameTeams = gameTeams
 }

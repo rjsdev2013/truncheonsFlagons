@@ -3,7 +3,7 @@ import { roundScores } from "./roundscoreinput.js"
 
 const createTeamSelectionList = (team) => {
     return `
-    <option value="${team.id}">${team.teamName}</option>
+    <option value="${team.teamName}" id= "${team.id}">${team.teamName}</option>
     `
 }
 
