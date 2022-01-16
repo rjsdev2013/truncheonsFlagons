@@ -35,8 +35,24 @@ export const roundScores = () => {
 
         <label for="team3">${gameTeams.team3}</label>
         <input type-"number" name="rounds" id="team3">
+
+        <button>Save Round Scores</button>
+
+        ${gameScoreBoard()}
         `
     
         return html
 }
+
+export const gameScoreBoard = () => {
+    const gameTeams = getGameTeams()
+    let html = `
+    <h2>Current Game Score</h2>
+    <div> ${gameTeams.team1} <span>0</span> </div>
+    <div>${gameTeams.team2} <span>0</span></div>
+    <div>${gameTeams.team3} <span>0</span></div>
+    `
+    return html
+}
+
  

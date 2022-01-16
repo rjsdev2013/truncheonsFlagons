@@ -1,5 +1,5 @@
 import { getTeams } from "./dataAccess.js"
-import { roundScores } from "./roundscoreinput.js"
+import { roundScores, gameScoreBoard} from "./roundscoreinput.js"
 
 const createTeamSelectionList = (team) => {
     return `
@@ -55,5 +55,6 @@ gameContainer.addEventListener(
     event => {
         console.log("made it to the event listener")
         gameContainer.innerHTML = roundScores()
+        
     }
 )
