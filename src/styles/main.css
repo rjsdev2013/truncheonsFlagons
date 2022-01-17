@@ -68,6 +68,13 @@ th {
     text-align: left;
 }
  
+.scoreinputs {
+    margin-bottom: 12px; 
+}
+
+label {
+    font-style: bold;
+}
 
 /***********************BUTTONS***********************/
 #addPlayer,

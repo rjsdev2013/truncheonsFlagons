@@ -24,28 +24,22 @@ export const TrunchAndFlag = () => {
         ${newTeamForm()}
         <button class="button" id="createTeam">Create Team</button>
     </section>
+
     <section class="playerForm">
         <h2>New Player</h2>
         ${PlayerForm()}
         <button class="button" id="addPlayer">Add Player to Team</button>
     </section>    
-    <section>
+
+    <section hidden>
         <h3>Current Game</h3>
         ${gameScoreBoard()}
     </section>
-    <section class="leaderBoard">
+
+    <section>
     <h3>Leaderboard</h3>
         ${Leaderboard()}
-    </div>
- 
     </section>
-    
-    
     `
-    
-    
-    
-
-
     return html
 }
