@@ -38,14 +38,12 @@ export const roundScores = () => {
 
         <button id="saveRound">Save Round Scores</button>
 
-        ${gameScoreBoard()}
         `
     
         return html
 }
 
 export const gameScoreBoard = () => {
-    const mainContainer = document.querySelector("#container")
     const gameTeams = getGameTeams()
     let html = `
     <table>
@@ -64,10 +62,11 @@ export const gameScoreBoard = () => {
      
     </table>
     `
-    
-    // this custom event is heard on game.js
-    mainContainer.dispatchEvent(new CustomEvent("gameScoreBoardChanged"))
     return html
+    
+    // // this custom event is heard on game.js
+    // mainContainer.dispatchEvent(new CustomEvent("gameScoreBoardChanged"))
+    // return html
 }
 
  
