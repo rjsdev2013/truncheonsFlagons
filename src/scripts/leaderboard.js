@@ -31,10 +31,3 @@ export const Leaderboard = () => {
 }
 
 
-/* <div class="team team--#)}">
-<div class="team_column team_name">
-${teams.map(createLeaderboardList).join("")}
-</div>
-<div class="team_column team_playerCount"></div>
-<div class="team_column team_score"></div>
-</div> */

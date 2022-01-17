@@ -1,5 +1,17 @@
 import { getTeams } from "./dataAccess.js"
 import { roundScores, gameScoreBoard} from "./roundscoreinput.js"
+import { TrunchAndFlag } from "./TrunchAndFlag.js"
+
+
+import { newTeamForm } from "./team.js"
+import { PlayerForm } from "./player.js"
+import { createTeam } from "./dataAccess.js"
+import { Leaderboard } from "./leaderboard.js"
+ 
+
+
+
+
 
 const createTeamSelectionList = (team) => {
     return `
@@ -58,3 +70,38 @@ gameContainer.addEventListener(
         
     }
 )
+
+const mainContainer = document.querySelector("#container")
+
+
+// ********************* PRETTY SURE THIS RUNS AN INFINITE LOOP. CONSIDER YOURSELF WARNED ********************* 
+
+// mainContainer.addEventListener(
+//     "gameScoreBoardChanged",
+//     event => {
+//         console.log("made it to the scoreboard event listener")
+//         mainContainer.innerHTML = `
+//         <section class="teamForm">
+//             <h2>New Team</h2>
+//             ${newTeamForm()}
+//             <button class="button" id="createTeam">Create Team</button>
+//         </section>
+    
+//         <section class="playerForm">
+//             <h2>New Player</h2>
+//             ${PlayerForm()}
+//             <button class="button" id="addPlayer">Add Player to Team</button>
+//         </section>    
+    
+//         <section>
+//             <h3>Current Game</h3>
+//             ${gameScoreBoard()}
+//         </section>
+    
+//         <section>
+//         <h3>Leaderboard</h3>
+//             ${Leaderboard()}
+//         </section>
+//         `
+//     }
+// )

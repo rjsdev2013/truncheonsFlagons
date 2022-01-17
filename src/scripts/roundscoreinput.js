@@ -28,13 +28,13 @@ export const roundScores = () => {
     let html = `
         <h2>Round 1</h2>
         <label for="team1">${gameTeams.team1}</label>
-        <input type="number" name="rounds" id="team1">
+        <input type="number" name="rounds" class="scoreinputs" id="team1">
 
         <label for="team2">${gameTeams.team2}</label>
-        <input type="number" name="rounds" id="team2">
+        <input type="number" name="rounds" class="scoreinputs" id="team2">
 
         <label for="team3">${gameTeams.team3}</label>
-        <input type="number" name="rounds" id="team3">
+        <input type="number" name="rounds" class="scoreinputs" id="team3">
 
         <button id="saveRound">Save Round Scores</button>
 
@@ -45,6 +45,7 @@ export const roundScores = () => {
 }
 
 export const gameScoreBoard = () => {
+    const mainContainer = document.querySelector("#container")
     const gameTeams = getGameTeams()
     let html = `
     <table>
@@ -63,11 +64,10 @@ export const gameScoreBoard = () => {
      
     </table>
     `
+    
+    // this custom event is heard on game.js
+    mainContainer.dispatchEvent(new CustomEvent("gameScoreBoardChanged"))
     return html
 }
 
-// <h4>Team<span class="tabchart">Score</span></h2>
-// <div> ${gameTeams.team1} <span class="tabchart">0</span> </div>
-// <div>${gameTeams.team2} <span class="tabchart">0</span></div>
-// <div>${gameTeams.team3} <span class="tabchart">0</span></div>
  
