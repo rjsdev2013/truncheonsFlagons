@@ -2,7 +2,7 @@ import { getTeams } from "./dataAccess.js"
 
 const createLeaderboardList = (team) => {
     return `
-    ${team.teamName}
+    <p>${team.teamName}</p>
     `
 }
 
@@ -15,16 +15,26 @@ export const Leaderboard = () => {
     const teams = getTeams()
 
     let html = `
-    <div class="team team--#)}">
-        <div class="team_column team_name">
-        ${teams.map(createLeaderboardList).join("")}
-        </div>
-        <div class="team_column team_playerCount"></div>
-        <div class="team_column team_score"></div>
-    </div>
+    <table>
+    <tr>
+        <th>Team</th><th>Score</th><th>Players</th>
+    </tr>
+    <tr>
+        <td> ${teams.map(createLeaderboardList).join("")}</td><td></td> <td></td> 
+    </tr>
+    </table>
 
     `
     return html
 
 
 }
+
+
+/* <div class="team team--#)}">
+<div class="team_column team_name">
+${teams.map(createLeaderboardList).join("")}
+</div>
+<div class="team_column team_playerCount"></div>
+<div class="team_column team_score"></div>
+</div> */

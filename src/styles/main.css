@@ -9,13 +9,14 @@
 
 #container {
     width: 20%;
-    min-width: 19%
+    min-width: 300px;
 }
 
 #gameContainer {
     display: flex;
     flex-direction: column;
     position: relative;
+    min-width: 300px;
 }
 
 h1 {
@@ -55,9 +56,23 @@ input {
     width: 200px;
 }
 
+.tabchart {
+    margin-left: 50px;
+}
+
+td {
+    min-width: 100px;
+}
+
+th {
+    text-align: left;
+}
+ 
+
 /***********************BUTTONS***********************/
 #addPlayer,
-#createTeam {
+#createTeam,
+#saveRound {
     margin: 8px 0;
     background-color: lightgreen;
     width: 200px;
