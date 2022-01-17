@@ -28,15 +28,15 @@ export const roundScores = () => {
     let html = `
         <h2>Round 1</h2>
         <label for="team1">${gameTeams.team1}</label>
-        <input type-"number" name="rounds" id="team1">
+        <input type="number" name="rounds" id="team1">
 
         <label for="team2">${gameTeams.team2}</label>
-        <input type-"number" name="rounds" id="team2">
+        <input type="number" name="rounds" id="team2">
 
         <label for="team3">${gameTeams.team3}</label>
-        <input type-"number" name="rounds" id="team3">
+        <input type="number" name="rounds" id="team3">
 
-        <button>Save Round Scores</button>
+        <button id="saveRound">Save Round Scores</button>
 
         ${gameScoreBoard()}
         `
@@ -47,12 +47,27 @@ export const roundScores = () => {
 export const gameScoreBoard = () => {
     const gameTeams = getGameTeams()
     let html = `
-    <h2>Current Game Score</h2>
-    <div> ${gameTeams.team1} <span>0</span> </div>
-    <div>${gameTeams.team2} <span>0</span></div>
-    <div>${gameTeams.team3} <span>0</span></div>
+    <table>
+    <tr>
+        <th>Team</th><th>Score</th>
+    </tr>
+    <tr>
+        <td>${gameTeams.team1}</td><td>0</td>
+    </tr>
+    <tr>
+        <td>${gameTeams.team2} </td><td>0</td>
+    </tr>
+    <tr>
+        <td>${gameTeams.team3} </td><td>0</td>
+    </tr>
+     
+    </table>
     `
     return html
 }
 
+// <h4>Team<span class="tabchart">Score</span></h2>
+// <div> ${gameTeams.team1} <span class="tabchart">0</span> </div>
+// <div>${gameTeams.team2} <span class="tabchart">0</span></div>
+// <div>${gameTeams.team3} <span class="tabchart">0</span></div>
  
